@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Edit Photo</h2>
+<div mat-dialog-content>
+  <img [src]="photoUrl" alt="Profile Photo" width="100%">
+  <!-- Add your photo editing UI here -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button [mat-dialog-close]="{ photoUrl: photoUrl }">Save</button>
+</div>
+<!-- [src]="photoUrl" alt="Profile Photo" -->
