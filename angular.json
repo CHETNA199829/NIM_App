@@ -67,6 +67,7 @@
           "configurations": {
             "production": {
               "browserTarget": "myDemoApp:build:production"
+             
             },
             "development": {
               "browserTarget": "myDemoApp:build:development"
@@ -96,7 +97,9 @@
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

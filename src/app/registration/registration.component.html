@@ -2,44 +2,54 @@
 <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="photo">Photo</label>
-      <input type="file" class="form-control-file" id="photo" formControlName="photo">
+      <input type="file" [(ngModel)]="apicall.photo" class="form-control-file" id="photo" formControlName="photo">
     </div>
     <div class="form-group">
       <label for="firstName">First Name</label>
-      <input type="text" class="form-control" id="firstName" formControlName="firstName">
+      <input type="text" [(ngModel)]="apicall.firstName" class="form-control" id="firstName" formControlName="firstName">
     </div>
     <div class="form-group">
       <label for="lastName">Last Name</label>
-      <input type="text" class="form-control" id="lastName" formControlName="lastName">
+      <input type="text" [(ngModel)]="apicall.lastName" class="form-control" id="lastName" formControlName="lastName">
     </div>
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" formControlName="email">
+      <input type="email" [(ngModel)]="apicall.email" class="form-control" id="email" formControlName="email">
     </div>
     <div class="form-group">
       <label for="age">Age</label>
-      <input type="range" class="form-control-range" id="age" formControlName="age" min="1" max="100">
+      <input type="range" [(ngModel)]="apicall.age" class="form-control-range" id="age" formControlName="age" min="1" max="100">
     </div>
     <div class="form-group">
       <label for="state">State</label>
-      <select class="form-control" id="state" formControlName="state">
+      <select class="form-control" [(ngModel)]="apicall.state" id="state" formControlName="state">
         <option value="AL">Alabama</option>
-        <!-- Add other states here -->
+        <option value="AL">Andhra Pradesh</option>
+        <option value="AL">Assam</option>
+        <option value="AL">Bihar</option>
+        <option value="AL">Chhattisgarh</option>
+        <option value="AL">Goa</option>
+        <option value="AL">Gujarat</option>
+        <option value="AL">Haryana</option>
+        <option value="AL">Jharkhand</option>
+        <option value="AL">Maharashtra</option>
+        <option value="AL">Manipur</option>
+        <option value="AL">Meghalaya</option>
       </select>
     </div>
     <div class="form-group">
       <label for="country">Country</label>
-      <input type="text" class="form-control" id="country" formControlName="country">
+      <input type="text" [(ngModel)]="apicall.country" class="form-control" id="country" formControlName="country">
     </div>
     <div class="form-group">
       <label for="address">Address</label>
-      <input type="text" class="form-control" id="address" formControlName="address">
+      <input type="text" [(ngModel)]="apicall.address" class="form-control" id="address" formControlName="address">
     </div>
     <div class="form-group">
       <label for="tags">Tags</label>
-      <input type="text" class="form-control" id="tags" formControlName="tags">
+      <input type="text"  [(ngModel)]="apicall.tags"  class="form-control" id="tags" formControlName="tags">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" >Submit</button>
     <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
     <!-- <button (click)="goToHome()">Back</button> -->
   </form>

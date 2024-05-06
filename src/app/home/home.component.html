@@ -1,18 +1,5 @@
-
-
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <title>Demo App 1</title>
-   
-</head>
-
-<body>
-    <div class="banner-area p-5 bg-image">
-       
-    <header>
+<div class="banner-area p-5 bg-image">
+       <header>
         <h1>Demo App</h1>
            <div class="menu">
             <ul>
@@ -24,63 +11,32 @@
                     <li><a href="#">CONTACT US</a></li>
                 </ul>
             </div>
-
-        </header>
+         </header>
         <div class="banner-text">
             <h1>I'm looking for..</h1>
-           <!-- <a href="#">Read More</a>
-            <a href="#">Watch More</a> -->
-        </div>
-        <form [formGroup]="registrationForm">
+          </div>
+         <form [formGroup]="registrationForm">
         <div class="form-group">
             <label for="jobDescription"></label>
             <input type="text" class="form-control" id="jobDescription" placeholder="Enter job description">
           </div>
           <div class="form-group">
             <label for="location"></label>
-            <!-- <input type="text" class="form-control" id="location" placeholder="Enter location"> -->
             <select id="location" formControlName="location" class="form-control">
                 <option value="home">Home</option>
                 <option value="company">Company</option>
               </select>
          </div>
-          <!-- <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="fullTime">
-            <label class="form-check-label" for="fullTime">
-              Full Time
-            </label> -->
+          
             <div class="form-group">
               <input type="checkbox" id="fullTime" formControlName="fullTime" class="form-check-input" />
                   <label for="fullTime" class="form-check-label">Full Time</label>
                 </div>
-          <!-- </div> -->
-          <!-- <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="partTime">
-            <label class="form-check-label" for="partTime">
-              Part Time/Casual/freelance
-            </label>
-          </div> -->
+          
           <div class="form-check">
             <input type="checkbox" id="partTime" formControlName="partTime" class="form-check-input" />
-            <label for="partTime" class="form-check-label">Part Time/Casual/Freelance</label>
+            <label for="partTime" class="form-check-label">Part Time/Casual/Freelance</label> 
        </div>
            <button type="submit" class="btn btn-primary" (click)="onSearch()">Search</button>
-          <!-- <button type="button" class="btn btn-secondary float-right" data-toggle="modal" data-target="#registerModal" (click)="openRegistrationDialog()">
-            Register 
-          </button> -->
-          <button type="button" class="btn btn-secondary float-right" data-toggle="modal" data-target="#registerModal" (click)="openRegistrationDialog()">
-
-        </form>
-
-
-    </div>
-</body>
- 
-
-
- <!-- <div class="home-container bg-image">
-    <h1>Welcome to My Angular Project</h1>
-  </div>
-
-  goToRegistration()
-   -->
+           <button type="button" class="btn btn-secondary float-right" (click)="openRegistrationDialog()">Register</button>
+          

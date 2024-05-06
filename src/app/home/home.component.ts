@@ -1,41 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { RegistrationComponent } from '../registration/registration.component';
+import { ApicallService } from '../apicall.service';
 
+// import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  // goToHome() {
+  //   throw new Error('Method not implemented.');
+  // }
   registrationForm: FormGroup;
+  endPoint : any;
 
-  constructor(private formBuilder: FormBuilder,private router: Router) {
+  constructor(private formBuilder: FormBuilder,private router: Router,private dialog: MatDialog, public apicallService:ApicallService) {
     this.registrationForm = this.formBuilder.group({
       // Add form controls here
     });
   }
-
-  ngOnInit() {
-    this.registrationForm = this.formBuilder.group({
-      jobDescription: ['', Validators.required],
-      location: ['', Validators.required],
-      fullTime: [false],
-      partTime: [false],
-      address: ['', Validators.required],
-      city: ['', Validators.required],
-      state: ['', Validators.required],
-      zip: ['', Validators.required],
-      country: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required],
-      confirmPassword: ['', Validators.required]
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+  openRegistrationDialog(): void {
+    const dialogRef = this.dialog.open(RegistrationComponent, {
+      width: '400px',
+      // Add any additional configuration options here
     });
-}
-onSearch() {
-  // Add your search logic here
-}
-goToRegistration() {
-  this.router.navigate(['/register']);
-}
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The registration form dialog was closed');
+    });
+  }
+  onSearch(): void {
+    // Add your search logic here
+    console.log('Search button clicked');
+  }
 }
