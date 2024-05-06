@@ -6,15 +6,15 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./edit-photo-dialog.component.scss']
 })
 export class EditPhotoDialogComponent {
-  photoUrl: string;
+//   photoUrl: string;
 
-  constructor(public dialogRef: MatDialogRef<EditPhotoDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {
-this.photoUrl = data.photoUrl;
-}
+//   constructor(public dialogRef: MatDialogRef<EditPhotoDialogComponent>,
+//     @Inject(MAT_DIALOG_DATA) public data: any) {
+// this.photoUrl = data.photoUrl;
+// }
 
-onNoClick(): void {
-this.dialogRef.close();
-}
+// onNoClick(): void {
+// this.dialogRef.close();
+// }
 }
 

@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   // }
   registrationForm: FormGroup;
   endPoint : any;
+  onCancel: any;
 
   constructor(private formBuilder: FormBuilder,private router: Router,private dialog: MatDialog, public apicallService:ApicallService) {
     this.registrationForm = this.formBuilder.group({
@@ -24,11 +25,13 @@ export class HomeComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  //   throw new Error('Method not implemented.');
   }
   openRegistrationDialog(): void {
     const dialogRef = this.dialog.open(RegistrationComponent, {
       width: '400px',
+      // data: { onCancel: this.onCancel.bind(this) }
+      data: { onCancel: () => this.router.navigate(['/home']) }
       // Add any additional configuration options here
     });
 

@@ -10,6 +10,7 @@ import { EditPhotoDialogComponent } from '../edit-photo-dialog/edit-photo-dialog
 export class ProfileComponent implements OnInit {
   profileForm: FormGroup;
    isInputDisabled: boolean;
+  //  endPoint: any;
    
   dialogRef!: MatDialogRef<EditPhotoDialogComponent>;
 
@@ -42,33 +43,23 @@ export class ProfileComponent implements OnInit {
     // });
   }
 
-    openEditPhotoDialog(): void {
-      const dialogRef = this.dialog.open(EditPhotoDialogComponent, {
-        width: '500px',
-        data: {
-          photoUrl: this.profileForm.get('photo')?.value
-        }
-      });
-      dialogRef.afterClosed().subscribe(result => {
-        if (result) {
-          this.profileForm.get('photo')?.setValue(result.photoUrl)
-        }
-      });
-    }
-
     // openEditPhotoDialog(): void {
-    //   this.dialogRef = this.dialog.open(EditPhotoDialogComponent, {
-    //     data: { photoUrl: this.profileForm.get('photo')?.value }
+    //   const dialogRef = this.dialog.open(EditPhotoDialogComponent, {
+    //     width: '500px',
+    //     data: {
+    //       photoUrl: this.profileForm.get('photo')?.value
+    //     }
     //   });
-  
-    //   this.dialogRef.afterClosed().subscribe(result => {
+    //   dialogRef.afterClosed().subscribe(result => {
     //     if (result) {
-    //       this.profileForm.get('photo')?.setValue(result.photoUrl);
+    //       this.profileForm.get('photo')?.setValue(result.photoUrl)
     //     }
     //   });
     // }
+
+   
     onSubmit(): void {
-      // Implement logic to save form data
+      
     }
   }
 

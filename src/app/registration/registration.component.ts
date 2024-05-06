@@ -15,7 +15,9 @@ import { ApicallService } from '../apicall.service';
 })
 export class RegistrationComponent implements OnInit{
   registrationForm!: FormGroup;
-  // onCancelBtn: any;
+  data:any;
+  journey: any;
+  endPoint : any;
 apicall: any = {};
 
   constructor(private formBuilder: FormBuilder, private router: Router,public dialog: MatDialog,private apicallService: ApicallService) {}
@@ -31,8 +33,8 @@ apicall: any = {};
     address: [''],
     tags: ['']
   })
-  this.onSubmit = this.onSubmit!.bind(this.apicallService);
-  this.onCancel = this.onCancel!.bind(this.apicallService);
+  // this.onSubmit = this.onSubmit!.bind(this.apicallService);
+  // this.onCancel = this.onCancel!.bind(this.apicallService);
 }
 ngOnInit():void {
  this.formDetails();
@@ -44,21 +46,21 @@ ngOnInit():void {
 
 onSubmit() {
  // console.log(this.registrationForm.value);
- this.apicallService.registerApiCall(this.apicall, this.registrationForm.value)
+ this.apicallService.postApiCall(this.apicall, this.registrationForm.value)
     .subscribe(response => {
       console.log('Registration successful', response);
-     this.router.navigate(['/profile']);
+    //  this.router.navigate(['/profile']);
     }, error => {
       console.error('Registration failed', error);
       });
 }
   
-onCancel() {
+// onCancel() {
   // Navigate back to the home page
   // You can use the Angular router to navigate back to the home page
-  this.router.navigate(['/home']);
+  // this.router.navigate(['/home']);
   // this.homeComponent.goToHome();
-}
+// }
   //   goToHome() {
   //   this.router.navigate(['/home']);
   // }
@@ -76,8 +78,29 @@ onCancel() {
   }
 
   
+
+  getData(){ //get api call u/a/o
+    this.apicallService.getApiCall(this.journey).subscribe(respo=>{
+     this.data = respo;
+      console.log('this.data',this.data);
+    
+    })
+  }
+
+  onCancel(){
+    // this.apicallService.postApiCall(this.endPoint, this.registrationForm.value).subscribe(respo=>{
+    //   if(this.endPoint ==='home'){
+        this.router.navigateByUrl('/home');
+    //   }
+    // })
+  }
 }
-  // ngOnInit(): void {
-  //   throw new Error('Method not implemented.');
-  // }
+
+
+
+
+
+
+
+
  
