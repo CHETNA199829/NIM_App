@@ -51,13 +51,6 @@ onSubmit() {
     //   console.error('Registration failed', error);
     //   });
 }
-// goToHome(pageName:string): void {
-  // this.router.navigate([`${pageName}`]);
-  // this.router.navigateByUrl('/home');
-// }
-// goToHome(){
-
-// }
 
 
 
