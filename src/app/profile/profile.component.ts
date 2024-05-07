@@ -43,22 +43,22 @@ export class ProfileComponent implements OnInit {
     // });
   }
 
-    // openEditPhotoDialog(): void {
-    //   const dialogRef = this.dialog.open(EditPhotoDialogComponent, {
-    //     width: '500px',
-    //     data: {
-    //       photoUrl: this.profileForm.get('photo')?.value
-    //     }
-    //   });
-    //   dialogRef.afterClosed().subscribe(result => {
-    //     if (result) {
-    //       this.profileForm.get('photo')?.setValue(result.photoUrl)
-    //     }
-    //   });
-    // }
+    openEditPhotoDialog(): void {
+      const dialogRef = this.dialog.open(EditPhotoDialogComponent, {
+        width: '500px',
+        data: {
+          photoUrl: this.profileForm.get('photo')?.value
+        }
+      });
+      dialogRef.afterClosed().subscribe(result => {
+        if (result) {
+          this.profileForm.get('photo')?.setValue(result.photoUrl)
+        }
+      });
+    }
 
    
-    onSubmit(): void {
+    onSubmit() {
       
     }
   }

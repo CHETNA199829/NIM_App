@@ -38,32 +38,28 @@ apicall: any = {};
 }
 ngOnInit():void {
  this.formDetails();
-//  const onCancelBtn = document.getElementById('oncancel-btn');
-//   this.onCancelBtn.addEventListener('click', this.onCancel.bind(this));
-// const submitBtn = document.getElementById('submit-btn');
-//   submitBtn.addEventListener('click', this.onSubmit.bind(this));
+
 }
 
 onSubmit() {
  // console.log(this.registrationForm.value);
- this.apicallService.postApiCall(this.apicall, this.registrationForm.value)
-    .subscribe(response => {
-      console.log('Registration successful', response);
-    //  this.router.navigate(['/profile']);
-    }, error => {
-      console.error('Registration failed', error);
-      });
+//  this.apicallService.postApiCall(this.apicall, this.registrationForm.value)
+//     .subscribe(response => {
+      // console.log('Registration successful', response);
+     this.router.navigateByUrl('/profile');
+    // }, error => {
+    //   console.error('Registration failed', error);
+    //   });
 }
-  
-// onCancel() {
-  // Navigate back to the home page
-  // You can use the Angular router to navigate back to the home page
-  // this.router.navigate(['/home']);
-  // this.homeComponent.goToHome();
+// goToHome(pageName:string): void {
+  // this.router.navigate([`${pageName}`]);
+  // this.router.navigateByUrl('/home');
 // }
-  //   goToHome() {
-  //   this.router.navigate(['/home']);
-  // }
+// goToHome(){
+
+// }
+
+
 
   openRegistrationDialog() {
     const dialogRef = this.dialog.open(RegistrationComponent, {
@@ -91,9 +87,9 @@ onSubmit() {
     // this.apicallService.postApiCall(this.endPoint, this.registrationForm.value).subscribe(respo=>{
     //   if(this.endPoint ==='home'){
         this.router.navigateByUrl('/home');
-    //   }
+      }
     // })
-  }
+  // }
 }
 
 

@@ -43,8 +43,8 @@
   <div class="profile-container">
     <div class="profile-header">
       <img src="https://example.com/profile-photo.jpg" alt="Profile photo" class="profile-photo">
-      <!-- <button class="edit-photo-button" (click)="openEditPhotoDialog()">Edit photo</button>
-    </div> -->
+      <button class="edit-photo-button" (click)="openEditPhotoDialog()">Edit photo</button>
+    </div>
     <div class="profile-content">
       <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
@@ -71,9 +71,9 @@
           <label for="address">Address:</label>
           <input type="text" id="address" formControlName="address" class="form-control">
         </div>
-        <!-- <div class="form-group">
-          <button class="edit-profile-button" type="submit">Edit profile</button>
-        </div> -->
+        <div class="form-group">
+          <button class="edit-profile-button" type="submit" routerLink="/register">Edit profile</button>
+        </div>
       </form>
     </div>
     <div class="profile-footer">

@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { Router } from '@angular/router';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class ApicallService {
-  journey: any;
+  // journey: any;
   url = 'http://localhost:3000'
+  router: any;
   constructor(private httpClient : HttpClient) { }
 
   postApiCall(endPoint: string, formData:any) {
