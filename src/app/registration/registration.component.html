@@ -3,14 +3,17 @@
     
   <!-- </div> -->
 
-<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-  <!-- <div class="popup-header">
-    <span class="close-icon" (click)="onCancel()">&times;</span>
-  </div> -->
+<form [formGroup]="registrationForm" class="scrollable-form" (ngSubmit)="onSubmit()">
+
     <div class="form-group">
       <label for="photo">Photo</label>
-      <input type="file" [(ngModel)]="apicall.photo" class="form-control-file" id="photo" formControlName="photo">
+     <input type="file" [(ngModel)]="apicall.photo" class="form-control-file" id="photo" formControlName="photo" >
     </div>
+
+   
+     
+
+
     <div class="form-group">
       <label for="firstName">First Name</label>
       <input type="text" [(ngModel)]="apicall.firstName" class="form-control" id="firstName" formControlName="firstName">

@@ -15,11 +15,11 @@
 
 form {
   background-color: white;
-  padding: 80px;
-  margin: 40px;
-  border-radius: 5px;
+  padding: 80px 80px;
+  margin: 0px;
+  border-radius: 7px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  width: 400px;
+  width: 300px;
   position: absolute;
 }
 
@@ -37,6 +37,14 @@ form select {
   border-radius: 5px;
   box-sizing: border-box;
 }
+// .form-group-1{
+//   width: 100%;
+//   padding: 7px;
+//   margin-bottom: 10px;
+//   border: 1px solid #ccc;
+//   border-radius: 5px;
+//   box-sizing: border-box;
+// }
 
 form button {
   width: 100%;
@@ -61,46 +69,11 @@ form .btn-secondary {
   margin-top: 10px;
 }
 
-// .popup-container {
-//   position: fixed;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  // background-color: #fff;
-  // padding: 20px;
-  // border: 1px solid #ccc;
-  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  // z-index: 1000;
-// }
 
-// .popup-header {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   margin-bottom: 20px;
-// }
+.scrollable-form {
+  max-height: 400px;
+  overflow-y: auto;
+}
 
-// .close-icon {
-//   cursor: pointer;
-//   font-size: 20px;
-//   font-weight: bold;
-// }
 
-// .sidebar {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 200px;
-//   height: 100%;
-//   background-color: #f5f5f5;
-//   padding: 20px;
-//   box-sizing: border-box;
-// }
 
-// .sidebar h3 {
-//   margin-top: 0;
-// }
-
-// .sidebar p {
-//   margin-bottom: 0;
-// }
